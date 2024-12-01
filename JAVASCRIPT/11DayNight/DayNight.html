@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: white;
+        }
+       
+        .bg-dark{
+            background-color: rgb(25, 26, 26);
+        }
+        #box{
+            width: 400px;
+            height: 100%;
+            color: rgb(162, 146, 146);
+            text-align: center;
+            margin: auto;
+            margin-top: 300px;
+        }
+        #day{
+            padding: 5px 10px;
+            border-radius: 5px;
+            position: absolute;
+            left: 47%;
+            top: 35%;
+        }
+      
+    </style>
+</head>
+<body>
+    <button id="day">Day/Night</button>
+   <div id="box" class="container">
+
+    <h1>This is heading</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, in? Accusamus aliquam illum corrupti! Doloremque est hic maiores perspiciatis sit. Minima non doloremque quod assumenda voluptatibus error nesciunt. Nobis, consequatur.</p>
+   </div>
+
+   <script>
+    let box = document.querySelector("#box");
+    let dayBtn = document.querySelector("#day");
+
+    dayBtn.addEventListener("click",()=>{
+        box.classList.toggle("dark");
+        document.body.classList.toggle("bg-dark");
+    })
+   </script>
+</body>
+</html>

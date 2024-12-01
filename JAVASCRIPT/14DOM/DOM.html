@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is DOM</h1>
+    <br> 
+    <input type="text" id="input">
+    <script>
+
+        // DOM - Document Object Model
+
+
+        let heading = document.getElementsByTagName("h1").item(0);
+
+        // css Manipulation
+
+        heading.style.color = "red";
+        heading.style.backgroundColor = "black";
+
+        // HTML Content Manipulation
+
+        heading.innerHTML = "This is <br> new Text";
+        console.log(heading.innerHTML);
+        console.log(heading.innerText);
+
+        // Event Listner 
+
+        heading.addEventListener("mouseenter",function(){
+            console.log("Mouse Entered");
+            
+        });
+
+        heading.addEventListener("mouseleave",function() {
+            console.log("Mouse Leave");
+            
+        });
+
+        // Access Input Values 
+
+        let myInput = document.querySelector("#input");
+
+        myInput.addEventListener("keypress",function(){
+            console.log(myInput.value);
+            
+        })
+
+
+        
+        
+
+
+
+    </script>
+</body>
+</html>

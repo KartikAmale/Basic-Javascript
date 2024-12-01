@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="fname" placeholder="Enter Full Name" required><br><br>
+        <input type="email" id="email" placeholder="Enter Email" required><br><br>
+        <input type="text" id="phone" placeholder="Enter Phone No." required><br><br>
+        <input type="password" id="pass" placeholder="Enter Password" required><br><br>
+        <button type="submit">Register</button>
+    </form>
+
+
+    <script>
+        let Form = document.getElementById("myForm");
+        Form.addEventListener("submit",(event)=>{
+            event.preventDefault();
+            const fullName = document.getElementById("fname");
+            const email = document.getElementById("email");
+            const phone = document.getElementById("phone");
+            const pass = document.getElementById("pass");
+
+
+            // console.log(fullName.value);
+            // console.log(email.value);
+            // console.log(phone.value);
+            // console.log(pass.value);
+
+            localStorage.setItem("Full Name",fullName.value);
+            localStorage.setItem("Email",email.value);
+            localStorage.setItem("Phone",phone.value);
+            localStorage.setItem("Password",pass.value);
+
+            alert("Your Data is Submited");
+
+            fullName.value = email.value = phone.value = "";
+
+
+        });
+    </script>
+</body>
+</html>

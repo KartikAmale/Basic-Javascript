@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="myInput"  placeholder="Enter any Value">
+
+    <button id="btn">Button</button>
+
+    <ul id="list"> </ul>
+
+    <script>
+
+        const input = document.getElementById("myInput");
+
+        const button = document.getElementById("btn");
+
+        const list = document.getElementById("list");
+
+        btn.addEventListener("click" , ()=>{
+            if(input.value != " "){
+                list.innerHTML += "<li>"+input.value+ "</li>";
+                alert("Item Added");
+            }
+            else{
+                alert("Please Enter Value...");
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

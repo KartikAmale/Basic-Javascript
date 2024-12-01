@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 200px;
+            background: red;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            margin: auto;
+            margin-top: 100px;
+        }
+        select{
+            width: 100px;
+            border-radius: 10px;
+            padding: 10px;
+            margin-left: 200px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div></div>
+    <select onchange="bgChange(this.value)">
+        <option value="red" selected>Red</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+        <option value="pink">Pink</option>
+        <option value="orange">Orange</option>
+    </select>
+    <script src="index.js"></script>
+</body>
+</html>

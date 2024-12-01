@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const input = document.getElementById("input");
+      const button = document.getElementById("button");
+      const list = document.getElementById("list");
+
+      button.addEventListener("click", () => {
+        const value = input.value;
+        const item = document.createElement("li");
+        item.textContent = value;
+        const deletButton = document.createElement("button");
+        deletButton.textContent = "Delete";
+        deletButton.onclick = () => {
+          list.removeChild(item);
+        };
+        item.appendChild(deletButton);
+        list.appendChild(item);
+        input.value = " ";
+      });
+      list.addEventListener("click", (event) => {
+        if (event.target.tagName === "LI") {
+          event.target.classList.toggle("done");
+        }
+      });
+    </script>
+  </body>
+</html>

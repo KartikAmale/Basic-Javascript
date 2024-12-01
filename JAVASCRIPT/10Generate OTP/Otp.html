@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="number" type="text" placeholder="Enter OTP Length">
+    <button id="btn">Generate OTP</button>
+</body>
+<script>
+    let myNum = document.querySelector(".number");
+
+    let btn = document.getElementById("btn");
+
+    btn.addEventListener("click",()=>{
+        let mySize = Number(myNum.value);
+
+        let otp = " " ;
+        for(let i=0;i<mySize;i++){
+
+            let randomNum = Math.random()*10;
+
+            otp+= Math.floor(randomNum);
+        }
+        alert("You OTP: " +otp);
+
+        
+    });
+</script>
+</html>

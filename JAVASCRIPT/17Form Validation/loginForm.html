@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <style>
+       
+        #myForm{
+            background-image: linear-gradient(90deg, rgb(208, 97, 104) 0%, rgb(227, 227, 10) 100%) ; 
+            border: 1px solid green;
+            border-radius: 10px;
+            width: 350px;
+            height: 200px;
+            padding: 10px 20px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15%;
+            background-size: cover;
+            background-repeat: no-repeat; 
+        }
+       
+        .container{
+            margin-top: 10px;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        button{
+            border-radius: 5px;
+            font-size: 15px;
+            margin-left: 30px;
+        }
+        label{
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <div class="container">
+      
+        <label>Email</label><br>
+        <i class='bx bx-envelope'></i> <input type="email" id="email" placeholder="Enter email address"><br><br>
+  
+        <label>Password</label><br>
+        <i class='bx bxs-key' ></i><input type="password" id="pass" placeholder="Enter password"><br><br>
+             
+        <button>Login</button>
+
+    </div>
+    </form>
+
+    <script>
+        let form = document.getElementById("myForm");
+        form.addEventListener("submit",(event)=>{
+            event.preventDefault();
+            let email = document.getElementById("email").value;
+            let pass = document.getElementById("pass").value;
+            let storeEmail = localStorage.getItem("email");
+            let storePass = localStorage.getItem("pass");
+
+            if(email == storeEmail){
+                if(pass == storePass){
+                    alert("LogIn Successfully");
+                    location.replace("https://www.youtube.com");
+                }
+                else{
+                    alert("Wrong Password");
+                }
+            }
+            else{
+                alert("Email Not Match");
+            } 
+        });
+    </script>
+</body>
+</html>

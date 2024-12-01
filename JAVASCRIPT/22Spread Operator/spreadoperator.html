@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let  group1 = [30,40,50];
+        let main = [43,65,73,...group1,24,67];
+        console.log(main);
+
+        let list = {
+            apple : 12,
+            orange:9
+        }
+
+        let list2 = {
+            bannana : 12,
+            mango:4
+        }
+
+        let listGroup = {
+            list,list2
+        }
+        console.log(listGroup);
+
+        let spreadObj = {
+            chiku:6, ...list, ...list2
+        }
+        console.log(spreadObj);
+
+        // map 
+
+        let newList = ["Kartik", "Pradip", "Dishant", "Pawan"];
+        newList.map((value)=>{
+            console.log(value);
+            
+        })
+        
+        
+        
+    </script>
+</body>
+</html>

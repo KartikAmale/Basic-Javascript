@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cat Fact</h1>
+    <ul id="list"></ul>
+
+
+
+    <script>
+
+        let list = document.getElementById("list");
+        let api = "https://catfact.ninja/fact";
+
+        for(let i=0;i<10;i++){
+            fetch(api)
+            .then((response)=>{
+                return response.json();
+            })
+
+            .then((data)=>{
+                list.innerHTML += "<li>"+data.fact+"</li>";
+            })
+
+            .catch((err)=>{
+                console.log("Error :"+err);
+            })
+
+            .finally(()=>{
+                console.log("Data Fetched");
+                
+            })
+        }
+    </script>
+</body>
+</html>

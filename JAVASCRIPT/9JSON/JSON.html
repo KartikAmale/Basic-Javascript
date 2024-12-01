@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Data = [
+            {
+                "First_Name" : "Kartik",
+                ":Last_Name" : "Amale",
+            },
+            {
+                "First_Name" : "Pradip",
+                ":Last_Name" : "Ghavate",
+            },
+            {
+                "First_Name" : "Pavan",
+                ":Last_Name" : "Pankhade",
+            },
+            {
+                "First_Name" : "Rushikesh",
+                ":Last_Name" : "Dhangude",
+            },
+            {
+                "First_Name" : "Chakrapani",
+                ":Last_Name" : "Gursule",
+            }
+         
+        ]
+
+        let jsonString = JSON.stringify(Data);
+        console.log(jsonString);
+
+        let jsonObject = JSON.parse(jsonString);
+        console.log(jsonObject);
+
+        Data.map((value , index) =>{
+            console.log(value.First_Name);
+            
+        });
+        
+        
+    </script>
+</body>
+</html>
